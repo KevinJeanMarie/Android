@@ -20,3 +20,16 @@ class MainActivity : AppCompatActivity() {
 
     }
 }
+
+class Product : AppCompatActivity() {
+    val name: String,
+    val brand: String,
+    val barcode: String,
+    val nutriscore: String,
+    val imageUrl: String,
+    val quantity: String,
+    val countries: List<String>,
+    val ingredients: List<String>,
+    val allergens: List<String>,
+    val additives: List<String>,
+}
