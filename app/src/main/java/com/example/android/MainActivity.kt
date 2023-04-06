@@ -16,7 +16,26 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.details)
         supportActionBar?.setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.toolbar))
 
+        val product = Product(
+            name = "Petits pois et carottes",
+            brand = "Cassegrain",
+            barcode = "3083680085304",
+            nutriscore = "E",
+            quantity = "400 g (280 g net égoutté)",
+            countries = listOf("France", "Japon", "Suisse"),
+            imageUrl = "https://static.openfoodfacts.org/images/products/308/368/008/5304/front_fr.7.400.jpg",
+            ingredients = listOf("Petit pois 66%", "eau", "garniture 2,8% (salade, oignon grelot)", "sucre", "sel","arôme naturel"),
+            allergens = listOf("aucune"),
+            additives = listOf("aucun")
+        )
+
         findViewById<TextView>(R.id.barcode).applyBoldText("Code-barres", product.barcode)
+        findViewById<TextView>(R.id.quantity).applyBoldText("Quantité", product.quantity)
+        findViewById<TextView>(R.id.countries).applyBoldText("Vendu en", product.countries.joinToString { "," })
+        findViewById<TextView>(R.id.ingredients).applyBoldText("Ingrédients",product.ingredients.joinToString { "," })
+        findViewById<TextView>(R.id.allergens).applyBoldText("Substance allergènes", product.allergens.joinToString { "," })
+        findViewById<TextView>(R.id.additives).applyBoldText("Additifs", product.additives.joinToString { "," })
+
 
         fun toast(){
             val text = "Hello toast!"
@@ -64,19 +83,3 @@ class Product(
                ")"
     }
 }
-fun main() {
-    val product = Product(
-        name = "Petits pois et carottes",
-        brand = "Cassegrain",
-        barcode = "3083680085304",
-        nutriscore = "E",
-        quantity = "400 g (280 g net égoutté)",
-        countries = listOf("France", "Japon", "Suisse"),
-        imageUrl = "https://static.openfoodfacts.org/images/products/308/368/008/5304/front_fr.7.400.jpg",
-        ingredients = listOf("Petit pois 66%", "eau", "garniture 2,8% (salade, oignon grelot)", "sucre", "sel","arôme naturel"),
-        allergens = listOf("aucune"),
-        additives = listOf("aucun")
-    )
-    println(product.toString())
-}
-

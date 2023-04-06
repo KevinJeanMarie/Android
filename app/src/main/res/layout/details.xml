@@ -62,6 +62,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/quantity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -70,6 +71,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/countries"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -78,6 +80,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/ingredients"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -86,6 +89,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/allergens"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -94,6 +98,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/additives"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
