@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.android.Extensions.applyBoldText
 
 class ProductListFragment  : Fragment() {
 
@@ -18,7 +19,27 @@ class ProductListFragment  : Fragment() {
     ): View? {
         return LayoutInflater.from(requireContext()).inflate(R.layout.productlist, container, false)
     }
-
+/*
+    val product = Product(
+        name = "Petits pois et carottes",
+        brand = "Cassegrain",
+        barcode = "3083680085304",
+        nutriscore = "E",
+        quantity = "400 g (280 g net égoutté)",
+        countries = listOf("France", "Japon", "Suisse"),
+        imageUrl = "https://static.openfoodfacts.org/images/products/308/368/008/5304/front_fr.7.400.jpg",
+        ingredients = listOf(
+            "Petit pois 66%",
+            "eau",
+            "garniture 2,8% (salade, oignon grelot)",
+            "sucre",
+            "sel",
+            "arôme naturel"
+        ),
+        allergens = listOf("aucune"),
+        additives = listOf("aucun")
+    )
+*/
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -31,7 +52,7 @@ class ProductListFragment  : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = ListAdapter(list, object : OnProductClickListener {
             override fun onProductClicked(position: String) {
-                // TODO Ouvrir l'écran
+                /* view.findViewById<TextView>(R.id.barcode).applyBoldText("Code-barres", product.barcode) */
             }
         })
     }
